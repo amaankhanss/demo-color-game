@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Color Galaxy (Demo)</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">Color Galaxy</div>
+  <div class="wallet">Coins: <span id="coins">1000</span></div>
+</header>
+
+<section class="balance">
+  <div>
+    <p>Available Coins</p>
+    <h2 id="coinBig">1000</h2>
+  </div>
+  <button class="ghost">Get Free Coins</button>
+</section>
+
+<section class="card">
+  <h3>Quick Play</h3>
+
+  <div class="colors">
+    <button class="c red" onclick="selectColor('red')">Red</button>
+    <button class="c green" onclick="selectColor('green')">Green</button>
+    <button class="c blue" onclick="selectColor('blue')">Blue</button>
+    <button class="c yellow" onclick="selectColor('yellow')">Yellow</button>
+  </div>
+
+  <div class="amounts">
+    <button onclick="setAmount(10)">10</button>
+    <button onclick="setAmount(50)">50</button>
+    <button onclick="setAmount(100)">100</button>
+    <button onclick="setAmount(500)">500</button>
+  </div>
+
+  <button class="play" onclick="playGame()">PLAY</button>
+  <p id="result" class="result"></p>
+</section>
+
+<section class="card">
+  <h3>Tiles</h3>
+  <div class="tiles" id="tiles"></div>
+</section>
+
+<section class="card">
+  <h3>Recent Games</h3>
+  <table>
+    <thead>
+      <tr><th>Color</th><th>Amount</th><th>Result</th></tr>
+    </thead>
+    <tbody id="history"></tbody>
+  </table>
+</section>
+
+<footer class="footer">
+  Demo game using virtual coins only. No real money.
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
